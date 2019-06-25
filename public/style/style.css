@@ -30,7 +30,7 @@ body {
 }
 
 .card {
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(62, 72, 76);
 }
