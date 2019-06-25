@@ -1,0 +1,46 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "hero-img": "path/to/file",
+            "name": "Pancakes",
+            "directions": "Combine dry ingredients. Stir in egg, oil and enough milk for batter to pour and mix lightly to blend. Cook pancake in a well greased pan/griddle. Makes 2.",
+            "ingredients": [
+                {
+                    "ingredient": "flour",
+                    "amount": 1,
+                    "measure": "cup"
+                },
+                {
+                    "ingredient": "sugar",
+                    "amount": 2,
+                    "measure": "tbsp"
+                },
+                {
+                    "ingredient": "baking soda",
+                    "amount": 2,
+                    "measure": "tsp"
+                },
+                {
+                    "ingredient": "salt",
+                    "amount": 0.5,
+                    "measure": "tsp"
+                },
+                {
+                    "ingredient": "egg (large)",
+                    "amount": 1,
+                    "measure": "count"
+                },
+                {
+                    "ingredient": "vegetable oil",
+                    "amount": 2,
+                    "measure": "tbsp"
+                },
+                {
+                    "ingredient": "milk",
+                    "misc": "just enough to make pourable"
+                }
+            ]
+        }
+    ]
+}
