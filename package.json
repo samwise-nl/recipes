@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/samwise-nl/recipes#readme",
   "dependencies": {
-    "eslint": "^6.0.1",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-google": "^0.13.0"
   }
 }
