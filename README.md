@@ -17,4 +17,4 @@ Recipe data comes from `pies.json` and can be pulled/updated using the `/load-re
 
 ### Screenshot
 
-![This is an image](./oct-2022-screenshot.png)
+![This is an image](./oct-2022-screenshot.jpg)
