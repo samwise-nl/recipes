@@ -64,7 +64,7 @@ body {
     font-size: 1.4rem;
     line-height: 2rem;
     white-space: nowrap;
-    overflow-x: hidden;
+    overflow: hidden;
     text-overflow: ellipsis;
 }
 
