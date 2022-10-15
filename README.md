@@ -4,6 +4,8 @@ An (unfinished) recipes app for testing out fetch, api calls and whatnot. Search
 
 ## Run details
 
+Add API details to `./api_key.js` in the root directory
+
 Start node express instance:
 ```bash
 node app.js
