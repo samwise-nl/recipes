@@ -1,15 +1,10 @@
-/* eslint-disable linebreak-style */
-fetch("/recipes")
-  .then(response => {
-    return response.json();
-  })
-  .then(data => {
-    loadRecipeCards(data);
-  });
+let recipeCollection = [];
 
-function loadRecipeCards(recipeJson) {
+function loadRecipeCards(allRecipes) {
+  console.log('loading recipes');
   let container = document.querySelector(".container");
-  recipeJson.forEach(entry => {
+  container.innerHTML = '';
+  allRecipes.forEach(entry => {
     let recipe = entry.recipe;
     let ingredients = "";
     recipe.ingredientLines.forEach(ingredient => {
@@ -30,3 +25,36 @@ function loadRecipeCards(recipeJson) {
     container.appendChild(div);
   });
 }
+
+function debounce(func, timeout = 800){
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { func.apply(this, args); }, timeout);
+  };
+}
+
+function search(event) {
+  console.log(`searching for ${event.target.value}`);
+  const searchString = event.target.value.toLowerCase();
+  let filteredRecipes = recipeCollection.filter(recipe => {
+    const recipeLabel = recipe.recipe.label.toLowerCase();
+    return recipeLabel.includes(searchString);
+  });
+  loadRecipeCards(filteredRecipes);
+}
+
+const searchKeyUpEvent = debounce((event) => search(event));
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  console.log('Dom Content has loaded!');
+
+  fetch("/recipes")
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      recipeCollection = data;
+      loadRecipeCards(data);
+    }); 
+});
